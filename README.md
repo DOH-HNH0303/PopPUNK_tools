@@ -1,8 +1,10 @@
 # PopPUNK_tools
 Guidance and tools to use for building and visualizing PopPUNK databases
+Remember - Each statistic is a guiding tool! Remember to check that your clustering patterns make sense. 
 
 # Prep your data
 Go to [poppunk_data_prep](https://github.com/DOH-HNH0303/PopPUNK_tools/tree/dev/poppunk_data_prep). Get outta here!
+
 
 # Easy db builds (for ideal data)
 Hahaha you wish it was this easy (and sometimes it is!)
@@ -12,6 +14,7 @@ Use the (almost) one-stop-shop [poppunk_easy_run.py](https://github.com/bacpop/P
 poppunk_easy_run.py --r-files <refseq>_input.txt  --analysis-args "--threads 8 --min-k 13 --max-k 29  --k-step 3" --output Corynebacterium_diphtheriae --viz --viz-args "'--microreact'"
 ```
 This will create and refine a db using dbscan and creat a Microreact visual
+
 # Not so easy db builds (for more troublesome data)
 
 # Example builds
