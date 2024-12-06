@@ -2,11 +2,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
+import sys
 from scipy.sparse import csr_matrix
 import argparse
 #import matplotlib.style as mplstyle
- 
- 
+
+
 def get_options():
 
     parser = argparse.ArgumentParser(description='determine distance "centers" with kmeans', prog='extract_centers')
@@ -49,7 +50,6 @@ for sublist in centers:
     for item in sublist:
         flat_list.append(item)
 flat_list.sort() 
-print(flat_list)
 threshold = np.mean(centers)
 
 counts, bin_edges = np.histogram(distances_flat, bins=100, density=True)
@@ -67,6 +67,7 @@ plt.ylabel("Density")
 plt.legend()
 title = prefix + "_distances.png"
 plt.savefig(title)
+print(f"Histogram of genetic distances has been saved to {title}")
 ##########################
 
 
@@ -74,7 +75,7 @@ plt.savefig(title)
 
 with open('thresholds.txt', 'a') as file: # Write new content 
     file.write(prefix + "\t"+ str(flat_list[0]) + "\t" + str(flat_list[1]) + "\t" +str(threshold) + "\n")
-
+print(f"Kmeans centers are {flat_list[0]} and {flat_list[1]}")
 print(f"Determined core genome distance threshold: {threshold}")
 
 
@@ -96,3 +97,4 @@ plt.ylabel('Inertia')
 plt.title('Elbow Method For Optimal Number of Clusters')
 title = prefix + "_elbow.png"
 plt.savefig(title)
+print(f"Elbow plot as been saved to {title}")
