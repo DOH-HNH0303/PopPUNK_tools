@@ -19,4 +19,7 @@ This will create and refine a db using dbscan and creat a Microreact visual
 
 # Example builds
 
+# General Troubleshooting
+Most scripts are created with the assumption that the prefix of a created database are the same prefix used in the files contained within the database. If renaming a database, make sure to edit the prefix od the database files to contain the new matching prefix.
+
 
