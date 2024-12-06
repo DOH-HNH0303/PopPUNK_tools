@@ -1,10 +1,18 @@
 # Tool instructions
-## List of Tools 
-### #<a name="compare_cluster_numbers.py"></a> compare_cluster_numbers.py
+<br>
 
-## [#compare_cluster_numbers.py]
+**List of Tools** 
+- [Compare Cluster Numbers](#compare-cluster-numbers)
 
-This script takes in two POPPUNK DBs' cluster assigments to see if they differ. POPPUNK clusters need to be visualized to confirm the cluster pattern matches the data, but similar database builds may yield identical cluster assigments such that the scores in DB builds should carry more influence in picking the final organism DB build to use.
+<br> 
+
+---
+
+<br>
+
+### Compare Cluster Numbers
+
+[This script](https://github.com/DOH-HNH0303/PopPUNK_tools/blob/dev/db_comparison_tools/compare_cluster_numbers.py) takes in two POPPUNK DBs' cluster assigments to see if they differ. POPPUNK clusters need to be visualized to confirm the cluster pattern matches the data, but similar database builds may yield identical cluster assigments such that the scores in DB builds should carry more influence in picking the final organism DB build to use.
 
 Example Use:
 ```
